@@ -11,7 +11,7 @@ class Familiar(models.Model):
 class Mascota(models.Model):
     nombre = models.CharField(max_length=100)
     raza = models.CharField(max_length=100)
-    edad = models.CharField(max_length=100)
+    edad = models.CharField(max_length=3)
     def __str__(self):
       return f"{self.nombre}, {self.raza}, {self.edad}, {self.id}"
 

@@ -5,6 +5,7 @@ from django.views import View
 
 def index(request):
     return render(request, "ejemplo/saludar.html")
+    
 def monstrar_familiares(request):
     lista_familiares = Familiar.objects.all()
     return render(request, "ejemplo/familiares.html", {"lista_familiares": lista_familiares})
@@ -56,6 +57,23 @@ class AltaFamiliar(View):
         
         return render(request, self.template_name, {"form": form})
 
+class BuscarMascota (View):
+    form_class = Buscar
+    template_name = 'ejemplo/buscar_mascota.html'
+    initial = {"nombre":""}
+    def get(self, request):
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form':form})
+    def post(self, request):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            nombre = form.cleaned_data.get("nombre")
+            lista_mascotas = Mascota.objects.filter(nombre__icontains=nombre).all() 
+            form = self.form_class(initial=self.initial)
+            return render(request, self.template_name, {'form':form, 
+                                                        'lista_mascotas':lista_mascotas})
+        return render(request, self.template_name, {"form": form})
+
 class AltaMascota(View):
 
     form_class = MascotaForm
@@ -70,11 +88,28 @@ class AltaMascota(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             form.save()
-            msg_exito = f"se cargo con éxito el familiar {form.cleaned_data.get('nombre')}"
+            msg_exito = f"se cargo con éxito la mascota {form.cleaned_data.get('nombre')}"
             form = self.form_class(initial=self.initial)
             return render(request, self.template_name, {'form':form, 
                                                         'msg_exito': msg_exito})
         
+        return render(request, self.template_name, {"form": form})
+
+class BuscarAutomovil (View):
+    form_class = Buscar
+    template_name = 'ejemplo/buscar_automovil.html'
+    initial = {"nombre":""}
+    def get(self, request):
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form':form})
+    def post(self, request):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            nombre = form.cleaned_data.get("nombre")
+            automoviles = Automovil.objects.filter(nombre__icontains=nombre).all() 
+            form = self.form_class(initial=self.initial)
+            return render(request, self.template_name, {'form':form, 
+                                                        'automoviles':automoviles})
         return render(request, self.template_name, {"form": form})
 
 
@@ -92,7 +127,7 @@ class AltaAutomovil(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             form.save()
-            msg_exito = f"se cargo con éxito el familiar {form.cleaned_data.get('nombre')}"
+            msg_exito = f"se cargo con éxito el automovil {form.cleaned_data.get('nombre')}"
             form = self.form_class(initial=self.initial)
             return render(request, self.template_name, {'form':form, 
                                                         'msg_exito': msg_exito})
