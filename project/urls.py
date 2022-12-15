@@ -15,10 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ejemplo.views import index, monstrar_familiares
+from ejemplo.views import index, monstrar_familiares, BuscarFamiliar, AltaFamiliar, mostrar_mascotas, mostrar_automoviles, AltaAutomovil, AltaMascota
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', index), 
     path('mi-familia/', monstrar_familiares),
+    path('mi-familia/buscar', BuscarFamiliar.as_view()), 
+    path('mi-familia/alta', AltaFamiliar.as_view()),
+    path('mascotas/', mostrar_mascotas),
+    path('mascotas/alta', AltaMascota.as_view()),
+    path('automoviles/', mostrar_automoviles),
+    path('automoviles/alta', AltaAutomovil.as_view()),
+
+
+
 ]

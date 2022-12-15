@@ -8,14 +8,14 @@
 </head>
 <body>
 
-    <h1>Listado de familiares</h1>
+    <h1>Listado de automoviles</h1>
 
     {% extends 'ejemplo/base.html' %}
-    {% block titulo%} Listado de Familiares {% endblock %}
+    {% block titulo%} Listado de Automoviles {% endblock %}
     {% block contenido %}
-        {% for familiar in lista_familiares %}
+        {% for automovil in automoviles %}
             <ul>
-                <li> Nombre: {{familiar.nombre}}, Dirección: {{familiar.direccion}}, Nacimiento: {{familiar.nacimiento}}</li>
+                <li> Marca: {{automovil.marca}}, Modelo_ {{automovil.modelo}}, Color: {{automovil.color}}</li>
             </ul>
         {% endfor %}
     {% endblock %}
