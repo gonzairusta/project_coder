@@ -2,6 +2,7 @@ from django.shortcuts import render
 from ejemplo.models import Familiar, Mascota, Automovil
 from ejemplo.forms import Buscar, FamiliarForm, AutomovilForm, MascotaForm
 from django.views import View 
+from django.views.generic import DetailView, ListView, CreateView, DeleteView, UpdateView
 
 def index(request):
     return render(request, "ejemplo/saludar.html")
@@ -133,3 +134,23 @@ class AltaAutomovil(View):
                                                         'msg_exito': msg_exito})
         
         return render(request, self.template_name, {"form": form})
+
+class FamiliarDetalle(DetailView):
+  model = Familiar
+
+class FamiliarList(ListView):
+  model = Familiar
+
+class FamiliarCrear(CreateView):
+  model = Familiar
+  success_url = "/panel-familia"
+  fields = ["nombre", "direccion", "nacimiento"]
+
+class FamiliarBorrar(DeleteView):
+  model = Familiar
+  success_url = "/panel-familia"
+
+class FamiliarActualizar(UpdateView):
+  model = Familiar
+  success_url = "/panel-familia"
+  fields = ["nombre", "direccion", "nacimiento"]
