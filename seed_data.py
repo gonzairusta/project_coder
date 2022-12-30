@@ -6,7 +6,7 @@ Familiar(nombre="Samuel", direccion="Rio Parana 745", numero_pasaporte=345345).s
 Familiar(nombre="Florencia", direccion="Rio Parana 745", numero_pasaporte=567567).save()
 
 
-from ejemplo_dos.models import Post
+from mundial.models import Post
 
 Post(titulo="Un post", sub_titulo="un sub post", texto="Un comentario", publicado_el="12/12/2022")
 
