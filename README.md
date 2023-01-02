@@ -2,6 +2,18 @@ project_coder
 Alumno: Gonzalo Irusta.
 Comision: 45020.
 Tutor: Enzo Martin Zotti.
+Version de Python: 3.10.2
+Version de Django: 4.1
+
+Primero hay que revisar si tenemos python instalado en nuestro ordenador, en una terminal escribimos:
+python --version
+
+Si esta instalado nos dira que version tenemos y podremos seguir con los pasos siguientes, de lo contrario aqui dejo el link para descargar la ultima version: 
+https://www.python.org/downloads/
+
+
+Luego instalaremos Django en una terminal con el siguiente comando: 
+pip install Django
 
 Para dar inicio al funcionamiento del programa tenes que seguir los siguientes pasos:
 
@@ -9,20 +21,12 @@ Para dar inicio al funcionamiento del programa tenes que seguir los siguientes p
 
 2- Seleccionar Clone git repository y agregar la URL de este proyecto (https://github.com/gonzairusta/project_coder.git)
 
-3- Crear o seleccionar una carpeta para el programa.
+3- Creamos o seleccionamos una carpeta para el programa.
 
-4- En la terminal ejecutar los comandos: "python manage.py migrate" y luego "python manage.py runserver".
+4- En la terminal ejecutamos los comandos: "python manage.py migrate" y luego "python manage.py runserver".
 
 5- Luego de escribir python manage.py runserver te aparecera el siguiente link al final de la terminal: http://127.0.0.1:8000/
 
-6- Para tener algunos datos precargados en la terminal puedes ejecuta los comandos: python manage.py shell import seed_data, sino podes cargar tus propios datos.
+6- Agregamos la palabra "mundial" al final del link: http://127.0.0.1:8000/mundial
+y ya podremos navegar en la pagina sin inconvenientes.
 
-Hay 3 tipos de modelos dsiponibles: mi-familia, mascotas y automoviles:
-
-http://127.0.0.1:8000/mi-familia : Con este link podras ver el listado de familiares.
-
-http://127.0.0.1:8000/mi-familia/alta Con este link podras agregar familiares al listado.
-
-http://127.0.0.1:8000/mi-familia/buscar Por ultimo con este link vas a poder buscar en el listado si existe el nombre que ingresaste.
-
-Podes reemplazar "mi-familia" por mascotas o automoviles para hacer el mismo proceso.
