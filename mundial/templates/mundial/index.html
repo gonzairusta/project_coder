@@ -1,6 +1,10 @@
 {% extends 'mundial/base.html' %}
 
 {% block contenido %}
+<h1 style="text-align: center; color: black;">ㅤ</h1>
+<h1 style="text-align: center; color: black;">Asociación del Fútbol Argentino</h1>
+<h1 style="text-align: center; color: black;">ㅤ</h1>
+
 <div class="container">
     <div class="row">
         <!-- Blog entries-->
@@ -14,7 +18,7 @@
                         <div class="small text-muted">{{posts.0.publicado_el}}</div>
                         <h2 class="card-title">{{posts.0.titulo}}</h2>
                         <p class="card-text">{{posts.0.sub_titulo}}</p>
-                        <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.0.id %}">Leer Mas →</a>
+                        <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.0.id %}">Detalle</a>
                     </div>
                     {% endif %}
                 </div>
@@ -29,7 +33,7 @@
                                 <div class="small text-muted">{{posts.1.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.1.titulo}}</h2>
                                 <p class="card-text">{{posts.1.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.1.id %}">Leer Mas →</a>
+                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.1.id %}">Detalle</a>
                             </div>
                             {% endif %}
                         </div>
@@ -41,7 +45,7 @@
                                 <div class="small text-muted">{{posts.2.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.2.titulo}}</h2>
                                 <p class="card-text">{{posts.2.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.2.id %}">Leer Mas →</a>
+                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.2.id %}">Detalle</a>
                             </div>
                             {% endif %}
                         </div>
@@ -55,7 +59,7 @@
                                 <div class="small text-muted">{{posts.3.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.3.titulo}}</h2>
                                 <p class="card-text">{{posts.3.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.3.id %}">Leer Mas →</a>
+                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.3.id %}">Detalle</a>
                             </div>
                             {% endif %}
                         </div>
@@ -67,7 +71,7 @@
                                 <div class="small text-muted">{{posts.4.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.4.titulo}}</h2>
                                 <p class="card-text">{{posts.4.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.4.id %}">Leer Mas →</a>
+                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.4.id %}">Detalle</a>
                             </div>
                             {% endif %}
                         </div>
@@ -78,7 +82,7 @@
                                 <div class="small text-muted">{{posts.5.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.5.titulo}}</h2>
                                 <p class="card-text">{{posts.5.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.5.id %}">Leer Mas →</a>
+                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.5.id %}">Detalle</a>
                             </div>
                             {% endif %}
                         </div>
