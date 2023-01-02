@@ -3791,6 +3791,7 @@ textarea.form-control-lg {
   display: block;
 }
 
+
 .dropdown-header {
   display: block;
   padding: 0.5rem 1rem;
@@ -11285,4 +11286,11 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+
+}
+
+.header-image{
+  background-image: url('/mundial/static/mundial/assets/img/seleccion.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
