@@ -1,13 +1,10 @@
 project_coder
 
 Alumno: Gonzalo Irusta.
-
 Comision: 45020.
-
 Tutor: Enzo Martin Zotti.
 
 Version de Python: 3.10.2
-
 Version de Django: 4.1
 
 Primero hay que revisar si tenemos python instalado en nuestro ordenador, en una terminal escribimos:
