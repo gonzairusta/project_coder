@@ -97,6 +97,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.footer-image{
+  background-image: url("/static/mundial/assets/img/imagen2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
