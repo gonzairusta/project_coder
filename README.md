@@ -22,11 +22,11 @@ pip install Django
 
 Para dar inicio al funcionamiento del programa tenes que seguir los siguientes pasos:
 
-1- Abrir Visual Studio Code.
+1- Creamos o seleccionamos una carpeta para el programa.
 
-2- Seleccionar Clone git repository y agregar la URL de este proyecto (https://github.com/gonzairusta/project_coder.git)
+2- Abrimos Git Bash
 
-3- Creamos o seleccionamos una carpeta para el programa.
+3- Escribimos git clone y agregamos la URL de este proyecto (https://github.com/gonzairusta/project_coder.git)
 
 4- En la terminal ejecutamos los comandos: "python manage.py migrate" y luego "python manage.py runserver".
 
