@@ -1,7 +1,9 @@
 {% extends "mundial/base.html" %}
 
 {% block contenido %}
+<center>
 {% if user.is_authenticated %}
+
 
 <a class="btn btn-primary"href="{% url 'mundial-crear' %}"> Crear Post </a>
 
@@ -16,19 +18,18 @@
 {% endif %}
 <ul>
 {% for post in object_list %}
-    <div>ㅤㅤ</div>
+    <div>ㅤㅤ</div>    
     <li> 
-       {{post.publicado_el}} - - {{post.titulo}}
+        {{post.titulo}} | {{post.publicado_el}}  
        <div> </div>
        <a class="btn btn-primary" href="{% url 'mundial-detalle' post.id %}">Ver</a>
        {% if user.is_authenticated %}
-       <div> </div>
        <a class="btn btn-primary" href="{% url 'mundial-borrar' post.id %}">Borrar</a>
-       <div> </div>
-       <a class="btn btn-primary" href="{% url 'mundial-actualizar' post.id %}">Actualizar</a>
+       <a class="btn btn-primary" href="{% url 'mundial-actualizar' post.id %}">Actualizar</a>        
        {% endif %}
-       
     </li>
+    
 {% endfor %}
 </ul>
+</center>
 {% endblock%}

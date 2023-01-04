@@ -72,3 +72,6 @@ class MensajeBorrar(LoginRequiredMixin, DeleteView):
     model = Mensaje
     success_url = reverse_lazy("mundial-mensajes-listar")
 
+def about(request):
+    return render(request, "mundial/about.html")
+

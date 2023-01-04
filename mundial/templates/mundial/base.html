@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Blog | Asociación del Fútbol Argentino</title>
+        <title>Bienvenido | Sitio Oficial de la Asociación del Fútbol Argentino</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -30,13 +30,14 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-index' %}">Inicio</a></li>
                         {% if user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'mundial-listar' %}"">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'mundial-listar' %}"">Posts</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-logout' %}"">Salir</a></li>
                         {% else %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-login' %}"">Ingresar</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-signup' %}"">Registrarse</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-mensajes-crear' %}">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'mundial-acerca-de' %}">Nosotros</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,9 +54,8 @@
         {% block contenido %} {% endblock %}
         <!-- Footer-->
         <footer class="py-5 bg-dark footer-image">
-            <div><p class="m-0 text-center text-black">  A.F.A </p></div>
 
-            <div><p class="m-0 text-center text-black"> Copyright  &copy; Todos los derechos reservados</p></div>
+            <div><p class="m-0 text-center text-black">Copyright © 2019. Asociación del Fútbol Argentino. Todos los derechos reservados.</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

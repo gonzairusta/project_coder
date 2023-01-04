@@ -27,6 +27,7 @@ from mundial.views import (index, PostDetalle, PostListar,
                                UserSignUp, UserLogin, UserLogout, 
                                AvatarActualizar, UserActualizar, MensajeCrear, MensajeListar, MensajeDetalle )
 from django.contrib.admin.views.decorators import staff_member_required
+from mundial.views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -59,6 +60,8 @@ urlpatterns = [
     path('mundial/mensajes/crear/', MensajeCrear.as_view(), name="mundial-mensajes-crear"),
     path('mundial/mensajes/<int:pk>/detalle/', MensajeDetalle.as_view(), name="mundial-mensajes-detalle"),
     path('mundial/mensajes/listar/', MensajeListar.as_view(), name="mundial-mensajes-listar"),
+    path('mundial/about', about, name="mundial-acerca-de"),
+
 ]
 
 
