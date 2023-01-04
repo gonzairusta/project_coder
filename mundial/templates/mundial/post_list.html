@@ -3,14 +3,12 @@
 {% block contenido %}
 <center>
 {% if user.is_authenticated %}
-
-<a class="btn btn-primary"href="{% url 'mundial-crear' %}"> Crear Post </a>
+<h3><button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" onclick=location.href="{% url 'mundial-crear'  %}">Crear Post</button>
 {% if user.avatar.imagen %}
-        <a class="btn btn-primary" href="{% url 'mundial-avatars-actualizar' user.avatar.id %}">Actualizar Avatar</a>
+        <button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" onclick=location.href="{% url 'mundial-avatars-actualizar' user.avatar.id %}">Actualizar Avatar</button>
     {% endif %}
-<a class="btn btn-primary" href="{% url 'mundial-users-actualizar' user.id %}"> Actualizar Perfil </a>
-<a class="btn btn-primary" href="{% url 'mundial-mensajes-listar' %}">  Mensajes </a>
-
+<button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" onclick=location.href="{% url 'mundial-users-actualizar' user.id %}">Actualizar Perfil</button>
+<button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;" onclick=location.href="{% url 'mundial-mensajes-listar' %}">Mensaje</button></h3>
 {% endif %}
 <ul>
 {% for post in object_list %}
