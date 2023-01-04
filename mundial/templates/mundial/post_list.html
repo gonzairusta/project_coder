@@ -4,31 +4,30 @@
 <center>
 {% if user.is_authenticated %}
 
-
 <a class="btn btn-primary"href="{% url 'mundial-crear' %}"> Crear Post </a>
-
 {% if user.avatar.imagen %}
         <a class="btn btn-primary" href="{% url 'mundial-avatars-actualizar' user.avatar.id %}">Actualizar Avatar</a>
     {% endif %}
-
 <a class="btn btn-primary" href="{% url 'mundial-users-actualizar' user.id %}"> Actualizar Perfil </a>
-
 <a class="btn btn-primary" href="{% url 'mundial-mensajes-listar' %}">  Mensajes </a>
 
 {% endif %}
 <ul>
 {% for post in object_list %}
-    <div>ㅤㅤ</div>    
+    <div>ㅤㅤ</div>
     <li> 
-        {{post.titulo}} | {{post.publicado_el}}  
+        <div>
+            <img height="300px" src="{{ post.imagen.url }}">
+        </div>
+        <h6>{{post.titulo}}</h6>
        <div> </div>
        <a class="btn btn-primary" href="{% url 'mundial-detalle' post.id %}">Ver</a>
        {% if user.is_authenticated %}
+       <a class="btn btn-primary" href="{% url 'mundial-actualizar' post.id %}">Actualizar</a> 
        <a class="btn btn-primary" href="{% url 'mundial-borrar' post.id %}">Borrar</a>
-       <a class="btn btn-primary" href="{% url 'mundial-actualizar' post.id %}">Actualizar</a>        
+       <div>ㅤㅤ</div>
        {% endif %}
     </li>
-    
 {% endfor %}
 </ul>
 </center>

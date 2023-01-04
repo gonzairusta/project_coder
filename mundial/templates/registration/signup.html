@@ -1,10 +1,15 @@
 {% extends "mundial/base.html" %}
 
 {% block contenido %}
+
 <h2>Registrar Usuario</h2> 
+<div> ㅤ</div>
+<div> ㅤ</div>
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="Registrarme">
 </form>
+<div> ㅤ</div>
+<div> ㅤ</div>
 {% endblock %}
