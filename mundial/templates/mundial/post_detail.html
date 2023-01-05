@@ -3,20 +3,15 @@
 {% block contenido %} 
     <center>
     <h1>{{object.titulo}}</h1>
-    <h6>{{object.sub_titulo}}</h6>
     <div> 
        <img height="384" src="{{object.imagen.url}}">
     </div>
-    <div> 
-        ㅤ
+    <h6>{{object.sub_titulo}}</h6>
+    <div> ㅤ</div>
+    <div>
+        <p class="detalles"> {{object.texto}}</p>
     </div>
-    
-    <div>
-        <p style="margin: 16px 20px 25px 18px;"> 
-            {{object.texto}}
-        </p>
-    <div>
-   
+    <div> ㅤ</div>
     <p> Publicado el {{object.publicado_el}}</p>
     </center>
 {% endblock %}

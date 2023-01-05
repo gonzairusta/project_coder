@@ -1,10 +1,7 @@
 {% extends 'mundial/base.html' %}
 
 {% block contenido %}
-<center>
-    <img width="150" class="img-container"  src="/static/mundial/assets/img/afa.png" alt="Logo AFA">
-</center>    
-<h1 style="text-align: center; color: black;">ㅤ</h1>
+  
 
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -16,10 +13,11 @@
                     {% if posts.0 %}
                     <a href="#!"><img class="card-img-top" src="{{posts.0.imagen.url}}" alt="..." /></a>
                     <div class="card-body">
-                        <div class="small text-muted">{{posts.0.publicado_el}}</div>
                         <h2 class="card-title">{{posts.0.titulo}}</h2>
-                        <p class="card-text">{{posts.0.sub_titulo}}</p>
-                        <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.0.id %}">Detalle</a>
+                        <p class="card-text">{{posts.0.publicado_el}}</p>
+                        <div align="right">
+                            <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.0.id %}">Detalle</a>
+                        </div>
                     </div>
                     {% endif %}
                 </div>
@@ -28,25 +26,27 @@
                     <div class="col-lg-6">
                         <!-- Blog post-->
                         <div class="card mb-4">
-                            {% if posts.1 %}
+                            {% if posts.0 %}
                             <a href="#!"><img class="card-img-top" src="{{posts.1.imagen.url}}" alt="..." /></a>
                             <div class="card-body">
-                                <div class="small text-muted">{{posts.1.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.1.titulo}}</h2>
-                                <p class="card-text">{{posts.1.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.1.id %}">Detalle</a>
+                                <p class="card-text">{{posts.1.publicado_el}}</p>
+                                <div align="right">
+                                    <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.1.id %}">Detalle</a>
+                                </div>
                             </div>
                             {% endif %}
                         </div>
                         <!-- Blog post-->
                         <div class="card mb-4">
-                            {% if posts.2 %}
+                            {% if posts.0 %}
                             <a href="#!"><img class="card-img-top" src="{{posts.2.imagen.url}}" alt="..." /></a>
                             <div class="card-body">
-                                <div class="small text-muted">{{posts.2.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.2.titulo}}</h2>
-                                <p class="card-text">{{posts.2.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.2.id %}">Detalle</a>
+                                <p class="card-text">{{posts.2.publicado_el}}</p>
+                                <div align="right">
+                                    <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.2.id %}">Detalle</a>
+                                </div>
                             </div>
                             {% endif %}
                         </div>
@@ -54,37 +54,41 @@
                     <div class="col-lg-6">
                         <!-- Blog post-->
                         <div class="card mb-4">
-                            {% if posts.3 %}
+                            {% if posts.0 %}
                             <a href="#!"><img class="card-img-top" src="{{posts.3.imagen.url}}" alt="..." /></a>
                             <div class="card-body">
-                                <div class="small text-muted">{{posts.3.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.3.titulo}}</h2>
-                                <p class="card-text">{{posts.3.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.3.id %}">Detalle</a>
+                                <p class="card-text">{{posts.3.publicado_el}}</p>
+                                <div align="right">
+                                    <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.3.id %}">Detalle</a>
+                                </div>
                             </div>
                             {% endif %}
                         </div>
                         <!-- Blog post-->
                         <div class="card mb-4">
-                            {% if posts.4 %}
+                            {% if posts.0 %}
                             <a href="#!"><img class="card-img-top" src="{{posts.4.imagen.url}}" alt="..." /></a>
                             <div class="card-body">
-                                <div class="small text-muted">{{posts.4.publicado_el}}</div>
                                 <h2 class="card-title">{{posts.4.titulo}}</h2>
-                                <p class="card-text">{{posts.4.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.4.id %}">Detalle</a>
+                                <p class="card-text">{{posts.4.publicado_el}}</p>
+                                <div align="right">
+                                    <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.4.id %}">Detalle</a>
+                                </div>
                             </div>
                             {% endif %}
                         </div>
                         <div class="card mb-4">
-                            {% if posts.5 %}
-                            <a href="#!"><img class="card-img-top" src="{{posts.5.imagen.url}}" alt="..." /></a>
-                            <div class="card-body">
-                                <div class="small text-muted">{{posts.5.publicado_el}}</div>
-                                <h2 class="card-title">{{posts.5.titulo}}</h2>
-                                <p class="card-text">{{posts.5.sub_titulo}}</p>
-                                <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.5.id %}">Detalle</a>
-                            </div>
+                            <div class="card mb-4">
+                                {% if posts.0 %}
+                                <a href="#!"><img class="card-img-top" src="{{posts.5.imagen.url}}" alt="..." /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title">{{posts.5.titulo}}</h2>
+                                    <p class="card-text">{{posts.5.publicado_el}}</p>
+                                    <div align="right">
+                                        <a class="btn btn-primary" href="{% url 'mundial-detalle' posts.5.id %}">Detalle</a>
+                                    </div>
+                                </div>
                             {% endif %}
                         </div>
                     </div>

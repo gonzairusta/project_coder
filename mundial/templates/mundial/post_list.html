@@ -3,29 +3,31 @@
 {% block contenido %}
 <center>
 {% if user.is_authenticated %}
-<h3><button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" onclick=location.href="{% url 'mundial-crear'  %}">Crear Post</button>
+<a class="btn btn-primary"; href="{% url 'mundial-crear'  %}">Crear Post</a>
 {% if user.avatar.imagen %}
-        <button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" onclick=location.href="{% url 'mundial-avatars-actualizar' user.avatar.id %}">Actualizar Avatar</button>
+<a class="btn btn-primary"; href="{% url 'mundial-avatars-actualizar' user.avatar.id %}">Actualizar Avatar</a>
     {% endif %}
-<button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" onclick=location.href="{% url 'mundial-users-actualizar' user.id %}">Actualizar Perfil</button>
-<button style="background-color:rgb(220, 180, 243); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;" onclick=location.href="{% url 'mundial-mensajes-listar' %}">Mensaje</button></h3>
+    <a class="btn btn-primary"; href="{% url 'mundial-users-actualizar' user.id %}">Actualizar Perfil</a>
+        <a class="btn btn-primary";  href="{% url 'mundial-mensajes-listar' %}">Mensaje</a>
 {% endif %}
 <ul>
 {% for post in object_list %}
     <div>ㅤㅤ</div>
-    <li> 
+    <p> 
+        <h5>{{post.titulo}}</h5>
         <div>
-            <img height="300px" src="{{ post.imagen.url }}">
+            <img height="350px" src="{{ post.imagen.url }}">
         </div>
-        <h6>{{post.titulo}}</h6>
+        <div>ㅤㅤ</div>
+        
        <div> </div>
        <a class="btn btn-primary" href="{% url 'mundial-detalle' post.id %}">Ver</a>
        {% if user.is_authenticated %}
        <a class="btn btn-primary" href="{% url 'mundial-actualizar' post.id %}">Actualizar</a> 
        <a class="btn btn-primary" href="{% url 'mundial-borrar' post.id %}">Borrar</a>
-       <div>ㅤㅤ</div>
+      
        {% endif %}
-    </li>
+    </p>
 {% endfor %}
 </ul>
 </center>

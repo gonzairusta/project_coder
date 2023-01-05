@@ -82,26 +82,21 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: black;
+  color: white;
   text-align: var(--bs-body-text-align);
-  background: url("/static/mundial/assets/img/fondo1.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
+  background-color: rgb(24, 24, 24);
+  background-size:contain;
+  background-repeat: repeat;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.header-image{
-  background-image: url("/static/mundial/assets/img/imagen.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+.detalles{
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: justify;
 }
 
-.footer-image{
-  background-image: url("/static/mundial/assets/img/imagen2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .boton{
   align-content: center;
@@ -3053,7 +3048,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: #000000;
   border-color: #0d6efd;
 }
 .btn-primary:hover {
@@ -4537,11 +4532,12 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgb(43, 119, 161);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -4568,11 +4564,12 @@ textarea.form-control-lg {
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
-  color: #000;
+  color: rgb(255, 255, 255);
 }
 
 .card-title {
   margin-bottom: 0.5rem;
+  color: #000;
 }
 
 .card-subtitle {

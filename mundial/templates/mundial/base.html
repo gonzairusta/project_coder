@@ -34,7 +34,7 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-listar' %}"">Posts</a></li>
                         
                         {% else %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'mundial-login' %}"">Iniciar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'mundial-login' %}"">Ingresar</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-signup' %}"">Registrarse</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'mundial-mensajes-crear' %}">Contacto</a></li>
@@ -47,23 +47,18 @@
                 </div>
             </div>
         </nav>
-        <!-- Page header with logo and tagline-->
-        <header class="py-5 bg-light border-bottom mb-4 header-image">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 style="color: black"> ㅤ</h1>
-                </div>
-            </div>
-        </header>
+        <div>ㅤㅤ</div>
+        <center>
+            <img width="180" class="img-container"  src="/static/mundial/assets/img/afa.png" alt="Logo AFA">
+        </center>  
+        <div>ㅤㅤ</div>
         <!-- Page content-->
         {% block contenido %} {% endblock %}
         <!-- Footer-->
-        <footer class="py-5 bg-dark footer-image">
+        <footer class="py-5 bg-dark">
 
-            <div><p class="m-0 text-center text-black">Copyright © 2019. Asociación del Fútbol Argentino. Todos los derechos reservados.</p></div>
-            <div>
-                ㅤ
-            </div>
+            <center> <div><p>Copyright © 2019. Asociación del Fútbol Argentino. Todos los derechos reservados.</p></div></center>
+            
             <center><div><h5><a href="{% url 'mundial-acerca-de' %}">Acerca de</a></h5></div></center>
         </footer>
         <!-- Bootstrap core JS-->
