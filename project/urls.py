@@ -25,7 +25,7 @@ from ejemplo.views import (index, saludar_a, sumar,
 from mundial.views import (index, PostDetalle, PostListar, 
                                PostCrear, PostBorrar, PostActualizar,
                                UserSignUp, UserLogin, UserLogout, 
-                               AvatarActualizar, UserActualizar, MensajeCrear, MensajeListar, MensajeDetalle )
+                               AvatarActualizar, UserActualizar, MensajeCrear, MensajeListar, MensajeDetalle, MensajeBorrar )
 from django.contrib.admin.views.decorators import staff_member_required
 from mundial.views import about
 
@@ -60,8 +60,8 @@ urlpatterns = [
     path('mundial/mensajes/crear/', MensajeCrear.as_view(), name="mundial-mensajes-crear"),
     path('mundial/mensajes/<int:pk>/detalle/', MensajeDetalle.as_view(), name="mundial-mensajes-detalle"),
     path('mundial/mensajes/listar/', MensajeListar.as_view(), name="mundial-mensajes-listar"),
+    path('mundial/mensajes/<int:pk>/borrar', staff_member_required(MensajeBorrar.as_view()), name="mundial-mensajes-borrar"),
     path('mundial/about', about, name="mundial-acerca-de"),
-
 ]
 
 
