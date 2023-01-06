@@ -1,14 +1,8 @@
-project_coder
-
 Alumno: Gonzalo Irusta.
 
 Comision: 45020.
 
-Tutor: Enzo Martin Zotti.
-
-Version de Python: 3.10.2
-
-Version de Django: 4.1
+Video explicativo: https://youtu.be/JWrFSQFwA9I
 
 Primero hay que revisar si tenemos python instalado en nuestro ordenador, en una terminal escribimos:
 python --version
@@ -24,7 +18,7 @@ Para dar inicio al funcionamiento del programa tenes que seguir los siguientes p
 
 1- Creamos o seleccionamos una carpeta para el programa.
 
-2- Abrimos Git Bash
+2- Abrimos Git Bash o una terminal.
 
 3- Escribimos git clone y agregamos la URL de este proyecto (https://github.com/gonzairusta/project_coder.git)
 
@@ -35,4 +29,4 @@ Para dar inicio al funcionamiento del programa tenes que seguir los siguientes p
 6- Agregamos la palabra "mundial" al final del link: http://127.0.0.1:8000/mundial
 y ya podremos navegar en la pagina sin inconvenientes.
 
-Video explicativo: https://youtu.be/JWrFSQFwA9I
+
