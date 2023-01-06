@@ -35,3 +35,4 @@ Para dar inicio al funcionamiento del programa tenes que seguir los siguientes p
 6- Agregamos la palabra "mundial" al final del link: http://127.0.0.1:8000/mundial
 y ya podremos navegar en la pagina sin inconvenientes.
 
+Video de la página: https://youtu.be/JWrFSQFwA9I
